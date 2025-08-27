@@ -1,14 +1,13 @@
 import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { Text, View } from 'react-native'
 import {NavigationContainer} from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import First from './pages/First'
 import Second from './pages/Second'
+import { RootStackParamList } from './pages/Type'
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
-function App() {
+const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
