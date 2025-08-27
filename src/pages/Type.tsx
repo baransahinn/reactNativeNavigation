@@ -1,4 +1,8 @@
 export  type RootStackParamList = {
-  FirstScreen: undefined;
-  SecondScreen: {userName: string};
+  WelcomeScreen: undefined;
 };
+
+export type ButtonProps = {
+  text: string;
+  onPress: () => void;
+}
