@@ -10,14 +10,12 @@ import {RootStackParamList} from './Type.tsx'
 
 function First({navigation}: Props) {
 
- 
-
   return (
 
     <SafeAreaView>
       <View>
         <Text>Welcome to the First Page!!!!!</Text>
-        <Button title="Go to Second Page" onPress={() => {navigation.navigate('SecondScreen')}} />
+        <Button title="Go to Second Page" onPress={() => {navigation.navigate('SecondScreen',{userName:'baran şahin'})}} />
       </View>
       </SafeAreaView>
  

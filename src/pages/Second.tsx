@@ -6,12 +6,13 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'SecondScreen'>;
 
-function Second({navigation}: Props) {
+function Second({navigation,route}: Props) {
 
   return (
     <SafeAreaView>
       <View>
         <Text>Welcome to the Second Page!</Text>
+        <Text>User name : {route.params.userName}</Text>
         <Button title="Go Back" onPress={() => {navigation.goBack()}}  />
       </View>
     </SafeAreaView>

@@ -1,4 +1,4 @@
 export  type RootStackParamList = {
   FirstScreen: undefined;
-  SecondScreen: undefined;
+  SecondScreen: {userName: string};
 };
