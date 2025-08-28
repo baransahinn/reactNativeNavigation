@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, TouchableOpacity } from 'react-native'
-import { ButtonProps } from '../../pages/Type'
+import { ButtonProps } from '../../Type'
 import styles from './Button.style'
 
 function Button({text , onPress}: ButtonProps) {

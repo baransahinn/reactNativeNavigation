@@ -3,12 +3,16 @@ import React from 'react'
 import { Text, View , StyleSheet} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Button from '../components/Button/Button'
+import { RootStackParamList } from '../Type';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-const WelcomeScreen = () => {
+type Props = NativeStackScreenProps<RootStackParamList, 'WelcomeScreen'>;
+
+const WelcomeScreen = ({ navigation }: Props) => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.header}>Welcome!</Text>
-      <Button text="Üye Kaydı Oluştur" onPress={() => {null}} />
+      <Text style={styles.header}>Morningstar Fitness Salonu</Text>
+      <Button text="Üye Kaydı Oluştur" onPress={() => {navigation.navigate('MemberSignScreen')}} />
     </SafeAreaView>
   )
 }
